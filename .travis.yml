@@ -1,5 +1,5 @@
 env:
-  - COMMAND='catkin build'
+  - COMMAND='catkin build --no-status'
   - COMMAND='catkin_make'
 script:
   - ROS_DISTRO=hydro  ROSWS=wstool BUILDER=catkin    USE_DEB=true
@@ -18,7 +18,7 @@ script:
   - sudo apt-get install -y ros-$ROS_DISTRO-catkin ros-$ROS_DISTRO-rospy ros-$ROS_DISTRO-rostest
   - set -e
   - set -x
-  - for (( i=0; i < 50; i++)); do rm -fr build devel .catkin*; bash -c "$COMMAND"; done
+  - for (( i=0; i < 1000; i++)); do rm -fr build devel .catkin*; bash -c "$COMMAND"; done
 
 
 
