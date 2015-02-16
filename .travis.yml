@@ -18,7 +18,7 @@ script:
   - sudo apt-get install -y ros-$ROS_DISTRO-catkin ros-$ROS_DISTRO-rospy ros-$ROS_DISTRO-rostest
   - set -e
   - set -x
-  - for (( i=0; i < 100; i++)); do bash -c "$COMMAND"; done
+  - for (( i=0; i < 1000; i++)); do rm -fr build devel .catkin*; bash -c "$COMMAND"; done
 
 
 
