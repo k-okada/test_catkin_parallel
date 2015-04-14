@@ -1,3 +1,4 @@
+# this should be solved via https://github.com/ros/catkin/pull/728, may be 0.6.12 ?
 env:
   - COMMAND='catkin build --no-status'
   - COMMAND='catkin_make'
